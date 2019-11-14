@@ -5,6 +5,13 @@ import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import org.apache.log4j.Logger
 
+/*
+spark-submit --class com.examples.MainExample \
+  --master local \
+  /Users/sethangavel/maven/spark-scala-maven-boilerplate-project/target/spark-scala-maven-project-0.0.1-SNAPSHOT-jar-with-dependencies.jar \
+  "/Users/sethangavel/datasets/sparkDatasets/words.txt" \
+  "/Users/sethangavel/datasets/sparkDatasets/output"
+ */
 object MainExample {
 
   def main(arg: Array[String]) {

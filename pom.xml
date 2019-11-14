@@ -14,7 +14,7 @@
 		<encoding>UTF-8</encoding>
 		<scala.tools.version>2.10</scala.tools.version>
 		<!-- Put the Scala version of the cluster -->
-		<scala.version>2.10.4</scala.version>
+		<scala.version>2.11.0</scala.version>
 	</properties>
 	
 	<!-- repository to add org.apache.spark -->
@@ -27,7 +27,7 @@
 
 	<build>
 		<sourceDirectory>src/main/scala</sourceDirectory>
-		<testSourceDirectory>src/test/scala</testSourceDirectory>
+
 		<plugins>
 			<plugin>
 				<!-- see http://davidb.github.com/scala-maven-plugin -->
@@ -42,7 +42,6 @@
 						</goals>
 						<configuration>
 							<args>
-								<arg>-make:transitive</arg>
 								<arg>-dependencyfile</arg>
 								<arg>${project.build.directory}/.scala_dependencies</arg>
 							</args>
@@ -95,10 +94,17 @@
 			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-core_2.10</artifactId>
 			<version>1.2.0-cdh5.3.1</version>
+		</dependency>
+-->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>2.1.0</version>
 		</dependency>
 
 	</dependencies>
